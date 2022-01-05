@@ -1,0 +1,50 @@
+body, html{
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 27% 27% 27%;
+    grid-template-rows: 8% 30% auto 10%;
+    grid-template-areas: 
+        "sidebar header header header"
+        "sidebar sect1 sect2 sect3"
+        "sidebar main main main"
+        "sidebar footer footer footer";
+}
+
+main{
+    grid-area: main;
+    background-color: hotpink;
+}
+
+aside{
+    grid-area: sidebar;
+    background-color: blue;
+}
+
+header{
+    grid-area: header;
+    background-color: cornflowerblue;
+}
+
+section:nth-of-type(1){
+    grid-area: sect1;
+    background-color: pink;
+}
+
+section:nth-of-type(2){
+    grid-area: sect2;
+    background-color: purple;
+}
+
+section:nth-of-type(3){
+    grid-area: sect3;
+    background-color: green;
+}
+
+footer{
+    grid-area: footer;
+    background-color: honeydew;
+}
